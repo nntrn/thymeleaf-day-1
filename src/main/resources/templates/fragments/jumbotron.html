@@ -1,0 +1,6 @@
+<div th:fragment="jumbotron(title, body)" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 th:replace="${title}?:_" class="display-4">default jumbotron title</h1>
+    <th:block th:include="${body}?:_" class="d-none" />
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html th:replace="/fragments/layout-full :: page(~{::head},~{::title},~{::style},~{::nav},~{::header},~{::section},~{},~{script})">
+<title>Sample Layout 1</title>
+<style>
+  footer {
+    position: sticky;
+    bottom: 0;
+  }
+</style>
+<nav th:include="/fragments/nav :: nav" class="navbar navbar-expand-sm navbar-light bg-light"></nav>
+<!-- breadcrumb -->
+<header class="bg-white">
+  <div aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </div>
+</header>
+<!-- header -->
+<header class="bg-secondary text-white-50 ">
+  <div class="col small"> bootstrap x thymeleaf x spring boot </div>
+</header>
+<!-- jumbotron -->
+<header>
+  <div th:replace="/fragments/jumbotron :: jumbotron(~{::h1},~{::.jt-body})" class="p-0">
+    <div class="col-sm-8 mx-auto">
+      <h1 class="display-3">sample 1</h1>
+      <div class="jt-body"> body </div>
+    </div>
+  </div>
+</header>
+<!-- alt footer -->
+<header>
+  <div class="d-flex">
+    <div class="col-auto align-items-center px-0 d-flex opacity-50 p-1 user-select-none">
+      <img th:replace="fragments/attributes :: siteicon-32" />
+    </div>
+    <div class="col-auto align-items-end">
+      <span th:include="fragments/attributes.html :: copyright" class="text-uppercase small text-muted" />
+      <th:block th:replace="fragments/attributes.html :: project-links" />
+    </div>
+  </div>
+</header>
+
+</html>

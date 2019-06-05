@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html th:replace="/fragments/layout-full :: page(~{::head},~{::title},~{::style},~{::nav},~{::header},~{::section},~{::footer},~{script})">
+<style>
+  /* align footer to the bottom of the page */
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+</style>
+<nav>
+  <th:block th:include="/fragments/include/nav :: collapsed-info(~{::#SiteAboutSection})">
+    <th:block id="SiteAboutSection">
+      <div class="col-auto py-1">
+        <h4 class="text-black">About</h4>
+        <div class="text-muted">Set a default about me to return in case one isn't provided</div>
+      </div>
+      <div class="offset-md-1 col-9 col-md-3 ">
+        <h4 class="text-black pt-3">References</h4>
+        <ul class="list-unstyled d-flex flex-sm-row flex-md-column justify-content-between">
+          <li><a href="https://github.com/nntrn/thymeleaf-day-1">Github</a></li>
+          <li><a href="https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html">Thymeleaf</a></li>
+          <li><a href="https://getbootstrap.com/docs/4.3/examples/">Bootstrap</a></li>
+          <li><a href="https://spring.io/projects/spring-boot">Spring</a></li>
+        </ul>
+      </div>
+      </div>
+    </th:block>
+</nav>
+<!-- <section>
+  <th:block th:replace="/fragments/nav :: links" class="navbar navbar-expand-sm navbar-light fixed-top bg-light"></th:block>
+</section> -->
+
+</html>

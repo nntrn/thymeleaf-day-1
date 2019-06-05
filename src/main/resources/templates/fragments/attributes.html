@@ -1,0 +1,75 @@
+<!-- meta data -->
+<meta th:fragment="author" name="author" content="annie tran @nntrn" />
+<meta th:fragment="description" name="description" content="bootstrap x thymeleaf x spring boot" />
+<!-- site title -->
+<span th:fragment="siteTitle">site name</span>
+<!-- copyright  -->
+<span th:fragment="copyright">
+  <div class="text-muted small text-uppercase">
+    <span>&copy;</span>
+    <span th:replace="fragments/objects :: year"></span>
+    <span th:include="fragments/attributes :: siteTitle"></span>
+  </div>
+</span>
+<!-- siteicon -->
+<img th:fragment="siteicon-16" src="/images/siteicon.svg" alt="nntrn" class="icon-16">
+<img th:fragment="siteicon-24" src="/images/siteicon.svg" alt="nntrn" class="icon-24">
+<img th:fragment="siteicon-32" src="/images/siteicon.svg" alt="nntrn" class="icon-32">
+<ul th:fragment="footer-links" class="bd-footer-links">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle p-0" href="#" id="templatelinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Framework</a>
+    <th:block th:include="fragments/attributes :: template-links" aria-labelledby="templatelinks" />
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle p-0" href="#" id="customlinks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Custom</a>
+    <th:block th:include="fragments/attributes :: custom-links" aria-labelledby="customlinks" />
+  </li>
+</ul>
+<!-- FRAMEWORK LINKS -->
+<th:block th:fragment="template-links">
+  <div class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Template</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item disabled" href="/template">Starter Template</a>
+      <a class="dropdown-item disabled" href="/template/grid">Grid</a>
+      <a class="dropdown-item" href="/template/jumbotron">Jumbotron</a>
+      <a class="dropdown-item" href="/template/forms">Forms</a>
+      <a class="dropdown-item disabled" href="/template/sign-in">Sign-in</a>
+      <a class="dropdown-item disabled" href="/template/dashboard">Dashboard</a>
+      <a class="dropdown-item disabled" href="/template/cover">Cover</a>
+      <a class="dropdown-item disabled" href="/template/carousel">Carousel</a>
+    </div>
+  </div>
+</th:block>
+<!-- COMPONENT LINKS -->
+<th:block th:fragment="components-links">
+  <div class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Component</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item disabled" href="/component/breadcrumb">Breadcrumb</a>
+      <a class="dropdown-item disabled" href="/component/navbar">Navbar</a>
+      <a class="dropdown-item disabled" href="/component/table">Table</a>
+    </div>
+  </div>
+</th:block>
+<!-- LAYOUT LINKS -->
+<th:block th:fragment="layout-links">
+  <div class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layout</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="/layout/sample-1">Sample 1</a>
+      <a class="dropdown-item" disabled href="/layout/sample-2">Sample 2</a>
+      <a class="dropdown-item" disabled href="/layout/sample-3">Sample 3</a>
+      <a class="dropdown-item" disabled href="/layout/sample-4">Sample 4</a>
+    </div>
+  </div>
+</th:block>
+<!-- BOOTSTRAP LINKS -->
+<th:block th:fragment="project-links">
+  <ul class="list-unstyled d-flex flex-row small my-0 separator separator-dot">
+    <li><a href="https://github.com/nntrn/thymeleaf-day-1">Github</a></li>
+    <li><a href="https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html">Thymeleaf</a></li>
+    <li><a href="https://getbootstrap.com/docs/4.3/examples/">Bootstrap</a></li>
+    <li><a href="https://spring.io/projects/spring-boot">Spring</a></li>
+  </ul>
+</th:block>

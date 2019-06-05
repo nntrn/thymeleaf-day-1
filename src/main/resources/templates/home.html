@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html th:replace="/fragments/layout :: page(~{::title},~{::style},~{::#content},~{script})">
+<title>home</title>
+<style>
+  body {
+    height: 100%
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+  }
+</style>
+<div id="content">
+  <div th:replace="/fragments/jumbotron :: jumbotron(~{::h1},~{::section})">
+    <h1 class="display-3">Hello, world!</h1>
+    <section>
+      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </section>
+  </div>
+</div>
+
+</html>

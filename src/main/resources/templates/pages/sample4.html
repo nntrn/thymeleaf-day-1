@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html th:replace="/fragments/layout-full :: page(~{::head},~{::title},~{::style},~{::nav},~{::header},~{::section},~{::footer},~{script})">
+<title>Sample Layout 4</title>
+<section>
+	<div class="container">
+		<h1>Format ISO</h1>
+		<p th:text="${#dates.formatISO(#dates.createToday())}"></p>
+
+	<p th:text="${#dates.day(#dates.createToday())}"></p>
+	<p th:text="${#dates.dayOfWeekName(#dates.createToday())}"></p>
+	<p th:text="${#dates.format(#dates.createToday(), 'dd-MM-yyyy HH:mm')}"></p>
+
+	</div>
+	
+
+	<!-- <p th:text="${#temporals.formatISO(timestamp)}"></p> -->
+	
+	<!-- <h1>Format manually</h1>
+	<p th:text="${#dates.format(standardDate, 'dd-MM-yyyy HH:mm')}"></p>
+	<p th:text="${#temporals.format(#dates.createToday()Time, 'dd-MM-yyyy HH:mm')}"></p>
+	<p th:text="${#temporals.format(#dates.createToday(), 'MM-yyyy')}"></p>
+	
+	<h1>Show only which day of a week</h1>
+	<p th:text="${#dates.day(#dates.createToday())}"></p>
+	<p th:text="${#temporals.day(#dates.createToday())}"></p>
+	<p th:text="${#temporals.day(#dates.createToday())}"></p>
+	
+	<h1>Show the name of the week day</h1>
+	<p th:text="${#dates.dayOfWeekName(standardDate)}"></p>
+	<p th:text="${#temporals.dayOfWeekName(#dates.createToday())}"></p>
+	<p th:text="${#temporals.dayOfWeekName(#dates.createToday())}"></p>
+	
+	<h1>Show the second of the day</h1>
+	<p th:text="${#dates.second(standardDate)}"></p>
+	<p th:text="${#temporals.second(#dates.createToday())}"></p> -->
+</section>
+</html>

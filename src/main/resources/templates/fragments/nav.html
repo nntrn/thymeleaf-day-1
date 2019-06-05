@@ -1,0 +1,30 @@
+<th:block data-th-fragment="links">
+  <div class="navbar-nav mr-auto">
+    <div class="nav-item dropdown">
+      <th:block th:include="fragments/attributes :: template-links" aria-labelledby="dropdown01" />
+    </div>
+    <div class="nav-item dropdown">
+      <th:block th:include="fragments/attributes :: components-links" aria-labelledby="dropdown02" />
+    </div>
+    <div class="nav-item dropdown">
+      <th:block th:include="fragments/attributes :: layout-links" aria-labelledby="dropdown03" />
+    </div>
+  </div>
+</th:block>
+<nav data-th-fragment="nav" class="position-sticky">
+  <!--/* site title is defined in attributes.html file */-->
+  <a class="navbar-brand" href="/" th:include="fragments/attributes :: siteTitle"></a>
+  <!-- navbar-toggler -->
+  <button class="navbar-toggler p-1" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <th:block th:replace="/fragments/nav :: links" class="navbar navbar-expand-sm navbar-light bg-light" />
+    <form class="form-group col-lg-4 col-sm-4 px-sm-0 my-0 my-md-0 ml-6 mx-0 px-0 d-none d-sm-block d-md-block d-none d-md-block  d-sm-none">
+      <div class="form-row my-0">
+        <input class="form-control col mr-2 bg-transparent" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success col-auto" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+</nav>

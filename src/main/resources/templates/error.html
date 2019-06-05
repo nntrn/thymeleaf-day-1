@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html th:replace="/fragments/layout-full :: page(~{::head},~{::title},~{::style},~{::nav},~{::header},~{::section},~{},~{script})">
+
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+</head>
+<style>
+	/* align footer to the bottom of the page */
+	body {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-content: space-between;
+	}
+</style>
+<title>error</title>
+<header>error</header>
+<header class="text-danger" th:text="${message}?:_">(error)</header>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html th:replace="/fragments/layout-full :: page(~{::head},~{::title},~{::style},~{::nav},~{::header},~{::section},~{},~{script})">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<title>error2</title>
+
+<body>
+    <div class="container">
+        <div th:replace="fragments/alert :: alert (type='danger', message=${errorMessage})">Error: Error</div>
+        <div th:include="fragments/footer :: footer">&copy; 2017 The Static Templates</div>
+    </div>
+</body>
+
+</html>

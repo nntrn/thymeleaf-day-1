@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-th-fragment="page(head, title, style, nav, header, content, footer, script)">
+
+<head>
+  <th:block th:replace="/fragments/head :: head" />
+  <title th:replace="${title}?:_" th:include="fragments/attributes :: siteTitle">(default page title)</title>
+  <!-- page specific elements  -->
+  <th:block th:replace="${style}?:_" />
+  <th:block th:replace="${head}?:_" />
+</head>
+
+<body class="d-flex flex-column">
+  <nav th:replace="${nav}?:_" class="navbar navbar-expand-sm navbar-dark sticky-top bg-dark">
+    <th:block th:include="/fragments/nav :: nav" />
+  </nav>
+  <th:block th:replace="${header}?:_" />
+  <main role="main">
+    <th:block th:insert="${content}?:_" class="flex-shrink-0" />
+  </main>
+  <footer th:replace="${footer}?:_" class="footer mt-auto py-3">
+    <div class="container">
+      <th:block th:replace="/fragments/footer :: footer" />
+    </div>
+  </footer>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <!-- page specific scripts  -->
+  <th:block th:replace="${script}?:_"></th:block>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+.vh-100 {
+  height: 100vh !important;
+}
+.icon-16 {
+  width: 16px !important;
+}
+.icon-24 {
+  width: 24px !important;
+}
+.icon-32 {
+  width: 32px !important;
+}
+.icon-64 {
+  width: 64px !important;
+}
+.icon-128 {
+  width: 128px !important;
+}
+.icon-256 {
+  width: 256px !important;
+}
+.icon-512 {
+  width: 512px !important;
+}
+.opacity-25 {
+  opacity: 0.25 !important;
+}
+.opacity-50 {
+  opacity: 0.5 !important;
+}
+.opacity-75 {
+  opacity: 0.75 !important;
+}
+.opacity-100 {
+  opacity: 1 !important;
+}
+.user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.user-select-text {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.user-select-all {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+.darker-25 {
+  background: rgba(0, 0, 0, 0.25);
+}
+.darker-15 {
+  background: rgba(0, 0, 0, 0.15);
+}
+.darker-5 {
+  background: rgba(0, 0, 0, 0.05);
+}
+.darker-10 {
+  background: rgba(0, 0, 0, 0.1);
+}
+.separator > *:not(:last-child):after {
+  font-size: inherit;
+  font-family: inherit;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.separator.separator-dot *:not(:last-child):after {
+  content: "\00B7";
+}

@@ -1,0 +1,33 @@
+<!------------------------------------------------ 
+<!DOCTYPE html>
+<html th:replace="/fragments/layout-full :: page(~{::head},~{::title},~{::style},~{::nav},~{::header},~{::section},~{::footer},~{script})">
+<style>
+  /* align footer to the bottom of the page */
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+</style>
+</html>
+--------------------------------------------------
+notice what happens when an inherited parameters in 
+page(head, title, style, nav, header, content, footer, script) aren't called
+  
+http://localhost:8081/layout/sample-2
+-------------------------------------------------->
+<!-- thymeleaf output -->
+<!DOCTYPE html>
+<html th:replace="/fragments/layout-full :: page(~{::head},~{::title},~{::style},~{::nav},~{::header},~{::section},~{::footer},~{script})">
+<style>
+  /* align footer to the bottom of the page */
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+</style>
+
+</html>

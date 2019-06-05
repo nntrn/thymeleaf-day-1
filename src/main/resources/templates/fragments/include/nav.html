@@ -1,0 +1,45 @@
+<!--
+
+collapsed-info(title,body, links)
+
+-->
+<nav data-th-fragment="collapsed-info(body)">
+  <div class="bg-light" id="navbarHeader">
+    <div class="container py-4">
+      <div class="row justify-content-sm-between">
+        <th:block th:replace="${body}?:_">
+          <!--/* default value returned if body isn't specified when inherited */-->
+          <div class="col-sm-8 col-md-7 py-1">
+            <h4 class="text-black">About</h4>
+            <div class="text-muted">Set a default about me to return in case one isn't provided</div>
+          </div>
+          <div class="col-sm-4 py-1">
+            <h4 class="text-black">Contact</h4>
+            <ul>
+              <li><a href="#" class="text-black">Follow on Twitter</a></li>
+              <li><a href="#" class="text-black">Like on Facebook</a></li>
+              <li><a href="#" class="text-black">Email me</a></li>
+            </ul>
+          </div>
+          <!--/* *********************  */-->
+        </th:block>
+        <a href="#" class="small text-muted" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">Close</a>
+      </div>
+    </div>
+  </div>
+  <!-- site header -->
+  <div class="navbar navbar-expand-sm navbar-collapse navbar-light bg-light shadow-sm border-top">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <img th:replace="fragments/attributes :: siteicon-16" />
+        <strong th:include="fragments/attributes :: siteTitle" class="ml-2"></strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div th:replace="/fragments/nav :: links" class=""></div>
+      </div>
+    </div>
+  </div>
+</nav>
